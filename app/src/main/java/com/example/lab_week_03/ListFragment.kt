@@ -32,25 +32,20 @@ class ListFragment : Fragment(){
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // A list of all your clickable coffee views
+        // A list of all your clickable coffee views, now with 5 items
         val coffeeList = listOf<View>(
             view.findViewById(R.id.affogato),
             view.findViewById(R.id.americano),
-            view.findViewById(R.id.latte)
+            view.findViewById(R.id.latte),
+            view.findViewById(R.id.cappuccino), // Added
+            view.findViewById(R.id.espresso)    // Added
         )
 
-        // Loop through each view and set its click listener
+        // This loop handles all five items without any other changes needed
         coffeeList.forEach { coffeeView ->
-
-            // This is the correct way ✅
             coffeeView.setOnClickListener {
-                // This code now runs ONLY when the coffeeView is clicked
                 val fragmentBundle = Bundle()
-
-                // Pass the unique ID of the clicked view to the next fragment
                 fragmentBundle.putInt(COFFEE_ID, coffeeView.id)
-
-                // Navigate using the action and the data bundle
                 findNavController().navigate(R.id.coffee_id_action, fragmentBundle)
             }
         }

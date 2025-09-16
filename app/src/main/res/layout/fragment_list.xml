@@ -21,10 +21,10 @@
             android:background="?android:attr/dividerVertical" />
         <TextView
             android:id="@+id/affogato"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:text="@string/affogato_title"/>
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/affogato_title"/>
         <TextView
             android:id="@+id/americano"
             android:layout_width="match_parent"
@@ -37,5 +37,17 @@
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:text="@string/latte_title"/>
+        <TextView
+            android:id="@+id/cappuccino"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/cappuccino_title"/>
+        <TextView
+            android:id="@+id/espresso"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="@string/espresso_title"/>
     </LinearLayout>
 </ScrollView>
